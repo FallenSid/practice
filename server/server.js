@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-
+const axios = require("axios")
 const app = express();
 
 app.use(cors());
@@ -10,9 +10,24 @@ app.get("/", (req, res) => {
   res.send("Server is running");
 });
 
-app.post("/chat", (req, res) => {
+app.post("/chat", async (req, res) => {
   console.log(req.body.message);
+  try {
+    const flaskResponse = await axios.post("http://127.0.0.1:8000/chat",
+        {
+            message:req.body.message,
+        }
+    );
 
+    res.json(flaskResponse.data);
+
+  } catch (error) {
+    console.error(error)
+    
+    res.status(500).json({
+        response:"There was a error in calling flask"
+    })
+  }
   res.json({
     response: "Hello from Express!",
   });
