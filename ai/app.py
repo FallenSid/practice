@@ -12,7 +12,10 @@ genai.configure(
 model = genai.GenerativeModel("gemini-2.5-flash")
 
 app = Flask(__name__)
-
+@app.route("/")
+def home():
+    return "Flask is running"
+    
 @app.route("/chat", methods=["POST"])
 def chat():
     message = request.json["message"]
