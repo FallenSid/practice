@@ -1,0 +1,113 @@
+.main-container{
+  width: 100%;
+  height: 100vh;
+  background-color: #161616;
+  color: white;
+  position: fixed;
+}
+.chat-body{
+  margin: auto;
+  width: 70%;
+  height: 100%;
+  border: 2px solid #262626;
+  background-color:#151515;
+  display: flex;
+  justify-content: center;
+}
+.header{
+  font-family: Arial, Helvetica, sans-serif;
+  position: fixed;
+  margin: 15px 25px;
+}
+.header h2{
+  text-decoration: underline;
+}
+.header a{
+  position: fixed;
+  right: 0;
+  top: 0;
+  font-size: 1.5rem;
+  font-weight:600 ;
+  color: white;
+  text-decoration: none;
+  height: 40px;
+  width: 14.95%;
+  text-align: center;
+  padding-top: 10px;
+  background-color: rgb(46, 46, 46);
+}
+.type-area{
+  position: fixed;
+  bottom: 20px;
+  width: 70%;
+  height: 10%;
+  max-height: 50px;
+}
+.type-area form{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.type-area input{
+  width: 75%;
+  height: 80%;
+  border-radius: 10px;
+  background-color: #383838;
+  border: none;
+  padding: 0px 20px;
+  color: white;
+}
+.type-area button{
+  height: 80%;
+  width: 80px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+  .type-area button:hover{
+    scale: 1.04;
+  }
+
+  .user{
+    font-family: Arial, Helvetica, sans-serif;
+    width: fit-content;
+    max-width: 60%;
+    height:auto;
+    padding: 10px;
+    right: 0;
+    border-radius: 10px 0px 10px 10px;
+    margin-left: auto;
+    background-color: rgba(75, 75, 75, 0.789);
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .bot{
+    font-family: Arial, Helvetica, sans-serif;
+    width: fit-content;
+    max-width: 60%;
+    height:auto;
+    padding: 10px;
+    left: 0;
+    border-radius: 10px 0px 10px 10px;
+    margin-right: auto;
+    background-color: rgba(177, 212, 255, 0.789);
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+  h4{
+    text-align: end;
+  }
+  .chat-area{
+    margin-top: 10px;
+    height: 89%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y:auto ;
+    scrollbar-width: none;
+  }
