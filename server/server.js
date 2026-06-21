@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 app.post("/chat", async (req, res) => {
   console.log(req.body.message);
   try {
-    const flaskResponse = await axios.post("https://practice-3-rx31.onrender.com/chat",
+    const flaskResponse = await axios.post("https://flask-6dd7.onrender.com/chat",
         {
             message:req.body.message,
         }
