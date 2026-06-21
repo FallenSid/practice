@@ -25,7 +25,7 @@ const App = () => {
       ]);
 
     try {
-      const response = await fetch("https://practice-2-k6sj.onrender.com/chat", {
+      const response = await fetch("https://express-hmda.onrender.com/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
